@@ -12,8 +12,6 @@ const Seo = ({ title, description, pathname, children }) => {
     twitterUsername,
   }
 
-  console.log(seo)
-
   return (
     <>
       <title>{seo.title}</title>
