@@ -20,5 +20,14 @@ module.exports = {
       }
     },
     "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `sabi's stuff`,
+        short_name: `sabi's stuff`,
+        start_url: `/`,
+        icon: `src/images/icon.png`,
+      }
+    },
   ],
 }
