@@ -21,8 +21,18 @@ const profileImages = [
 const IndexPage = () => {
   return (
     <Layout pageTitle="home">
-      <p>hi, i'm sabi! i'm just a demon kerret (cat/ferret) that likes to program things</p>
-      {profileImages[Math.floor(Math.random() * profileImages.length)]}
+      <div className="card">
+        <div className="card-body">
+          <div className="row">
+            <div className="col-4">
+              {profileImages[Math.floor(Math.random() * profileImages.length)]}
+            </div>
+            <div className="col-8">
+              <h4>hi, i'm sabi! i'm just a demon kerret (cat/ferret) that likes to program things</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
