@@ -57,6 +57,15 @@ const SocialLink = ({ href, name, last }) => {
   )
 }
 
-export const Head = () => <Seo pageTitle="home" />
+export const Head = () => (
+  <Seo pageTitle="home">
+    <body style={protoBG} />
+  </Seo>
+)
+
+const protoBG = {
+  backgroundImage: "url('protogens_tile.png')",
+  backgroundSize: "50%"
+}
 
 export default IndexPage
