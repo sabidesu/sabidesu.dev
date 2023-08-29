@@ -36,17 +36,24 @@ const IndexPage = () => {
               <h4>hi, i'm sabi!</h4>
               <p className="mb-1">i'm just a demon kerret (cat/ferret) that likes to program things. you can find me at the places below</p>
               <ul className="navbar-nav flex-row">
-                <li className="nav-item me-2"><a href="https://twitter.com/sabidesu1" className="nav-link">twitter</a></li>
-                <li className="nav-item nav-link me-2">・</li>
-                <li className="nav-item me-2"><a href="https://tumblr.com/sabidesu" className="nav-link">tumblr</a></li>
-                <li className="nav-item nav-link me-2">・</li>
-                <li className="nav-item me-2"><a href="https://bsky.app/profile/sabidesu.dev" className="nav-link">bluesky</a></li>
+                <SocialLink href="https://twitter.com/sabidesu1" name="twitter" />
+                <SocialLink href="https://tumblr.com/sabidesu" name="tumblr" />
+                <SocialLink href="https://bsky.app/profile/sabidesu.dev" name="bluesky" last />
               </ul>
             </div>
           </div>
         </div>
       </div>
     </Layout>
+  )
+}
+
+const SocialLink = ({ href, name, last }) => {
+  return (
+    <>
+      <li className="nav-item me-2 text-danger-emphasis"><a href={href} className="nav-link">{name}</a></li>
+      {!last && <li className="nav-item nav-link me-2">・</li>}
+    </>
   )
 }
 
