@@ -25,7 +25,7 @@ const profileImages = [
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="home">
+    <Layout pageTitle="">
       <div className="card">
         <div className="card-body">
           <div className="row align-items-center">
