@@ -14,7 +14,7 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark text-white">
+      <nav className="navbar navbar-expand-sm bg-dark text-white">
         <div className="container-fluid">
           <a className="navbar-brand">{data.site.siteMetadata.title}</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@ const Layout = ({ pageTitle, children }) => {
           </div>
         </div>
       </nav>
-      <main>
+      <main className="w-75 position-absolute top-50 start-50 translate-middle">
         <h1>{pageTitle}</h1>
         {children}
       </main>
