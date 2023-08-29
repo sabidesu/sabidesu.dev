@@ -21,7 +21,7 @@ const profileImages = [
 const IndexPage = () => {
   return (
     <Layout pageTitle="home">
-      <p>hi, i'm sabi! i'm just a demon kerret (cat/ferret) that likes to make things</p>
+      <p>hi, i'm sabi! i'm just a demon kerret (cat/ferret) that likes to program things</p>
       {profileImages[Math.floor(Math.random() * profileImages.length)]}
     </Layout>
   )
