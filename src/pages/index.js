@@ -26,14 +26,14 @@ const profileImages = [
 const IndexPage = () => {
   return (
     <Layout pageTitle="">
-      <div className="card text-bg-dark">
+      <div className="card">
         <div className="card-body">
           <div className="row align-items-center">
             <div className="col-4">
               {profileImages[Math.floor(Math.random() * profileImages.length)]}
             </div>
             <div className="col-8">
-              <h4>hi, i'm sabi!</h4>
+              <h4 className="text-info-emphasis">hi, i'm sabi!</h4>
               <p className="mb-1">i'm just a demon kerret (cat/ferret) that likes to program things. you can find me at the places below</p>
               <ul className="navbar-nav flex-row">
                 <SocialLink href="https://twitter.com/sabidesu1" name="twitter" />
