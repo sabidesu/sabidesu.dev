@@ -18,7 +18,7 @@ const ProtogensPage = () => {
 export const Head = () => (
   <Seo
     pageTitle="protogens!"
-    description="download the protogen design here!"
+    description="download sabi's protogen design here!"
     image="/protogen_wallpaper.png"
   >
     <meta http-equiv="Refresh" content="0; URL=https://drive.google.com/file/d/1H6fxnCpdE888NsizKBDOyg6XrsUbc-TC/view?usp=drive_link" />
