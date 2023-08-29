@@ -3,18 +3,23 @@ import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 
+const profileClasses = "rounded-circle img-fluid"
+
 const profileImages = [
   <StaticImage
     alt="a red cat-ferret combination with pink hair and yellow horns turned three-quarters and wearing a blue hoodie, looking at the viewer with red eyes"
     src="../images/fanart_colored_by_rose.png"
+    className={profileClasses}
     />,
   <StaticImage
     alt="a red cat-ferret combination with pink hair and yellow horns looking down at something"
     src="../images/fullbody_ivory.png"
+    className={profileClasses}
     />,
   <StaticImage
     alt="a red cat-ferret combination with pink hair and yellow horns wearing a blue hoodie with oreos on the design"
     src="../images/gift_from_kokorodove.png"
+    className={profileClasses}
     />
 ]
 
@@ -23,7 +28,7 @@ const IndexPage = () => {
     <Layout pageTitle="home">
       <div className="card">
         <div className="card-body">
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-4">
               {profileImages[Math.floor(Math.random() * profileImages.length)]}
             </div>
