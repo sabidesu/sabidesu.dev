@@ -26,14 +26,22 @@ const profileImages = [
 const IndexPage = () => {
   return (
     <Layout pageTitle="">
-      <div className="card">
+      <div className="card text-bg-dark">
         <div className="card-body">
           <div className="row align-items-center">
             <div className="col-4">
               {profileImages[Math.floor(Math.random() * profileImages.length)]}
             </div>
             <div className="col-8">
-              <h4>hi, i'm sabi! i'm just a demon kerret (cat/ferret) that likes to program things</h4>
+              <h4>hi, i'm sabi!</h4>
+              <p className="mb-1">i'm just a demon kerret (cat/ferret) that likes to program things. you can find me at the places below</p>
+              <ul className="navbar-nav flex-row">
+                <li className="nav-item me-2"><a href="https://twitter.com/sabidesu1" className="nav-link">twitter</a></li>
+                <li className="nav-item nav-link me-2">・</li>
+                <li className="nav-item me-2"><a href="https://tumblr.com/sabidesu" className="nav-link">tumblr</a></li>
+                <li className="nav-item nav-link me-2">・</li>
+                <li className="nav-item me-2"><a href="https://bsky.app/profile/sabidesu.dev" className="nav-link">bluesky</a></li>
+              </ul>
             </div>
           </div>
         </div>
