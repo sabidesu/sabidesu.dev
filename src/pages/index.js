@@ -23,6 +23,21 @@ const profileImages = [
     />
 ]
 
+const socialMedia = [
+  {
+    href: "https://twitter.com/sabidesu1",
+    name: "twitter",
+  },
+  {
+    href: "https://tumblr.com/sabidesu",
+    name: "tumblr",
+  },
+  {
+    href: "https://bsky.app/profile/sabidesu.dev",
+    name: "bluesky",
+  }
+]
+
 const IndexPage = () => {
   return (
     <Layout pageTitle="">
@@ -35,16 +50,7 @@ const IndexPage = () => {
             <div className="col-sm-8">
               <h4 className="text-info-emphasis">hi, i'm sabi!</h4>
               <p className="mb-1">i'm just a demon kerret (cat/ferret) that likes to program things. you can find me at the places below</p>
-              <ul className="navbar-nav flex-row d-none d-sm-flex">
-                <SocialLink href="https://twitter.com/sabidesu1" name="twitter" />
-                <SocialLink href="https://tumblr.com/sabidesu" name="tumblr" />
-                <SocialLink href="https://bsky.app/profile/sabidesu.dev" name="bluesky" last />
-              </ul>
-              <div className="d-sm-none mt-3">
-                <a href="https://twitter.com/sabidesu1" className="btn btn-outline-danger rounded-pill w-100 mb-2">twitter</a>
-                <a href="https://tumblr.com/sabidesu" className="btn btn-outline-danger rounded-pill w-100 mb-2">tumblr</a>
-                <a href="https://bsky.app/profile/sabidesu.dev" className="btn btn-outline-danger rounded-pill w-100">bluesky</a>
-              </div>
+              <Socials links={socialMedia} />
             </div>
           </div>
         </div>
@@ -62,15 +68,47 @@ const SocialLink = ({ href, name, last }) => {
   )
 }
 
-export const Head = () => (
-  <Seo pageTitle="home">
-    <body style={protoBG} />
-  </Seo>
-)
+const SocialButton = ({ href, name, last }) => {
+  let classes = "btn btn-outline-danger rounded-pill w-100"
+  if (!last) classes += " mb-2"
+
+  return (
+    <a href={href} className={classes}>{name}</a>
+  )
+}
+
+const Socials = ({ links }) => {
+  return (
+    <>
+      <ul className="navbar-nav flex-row d-none d-sm-flex">
+        {
+          links.map(({ href, name }, index) => {
+            if (index === links.length - 1) return <SocialLink href={href} name={name} key={name} last />
+            return <SocialLink href={href} name={name} key={name} />
+          })
+        }
+      </ul>
+      <div className="d-sm-none mt-3">
+        {
+          links.map(({ href, name }, index) => {
+            if (index === links.length - 1) return <SocialButton href={href} name={name} key={name} last />
+            return <SocialButton href={href} name={name} key={name} />
+          })
+        }
+      </div>
+    </>
+  )
+}
 
 const protoBG = {
   backgroundImage: "url('protogens_tile.png')",
   backgroundSize: "50%"
 }
+
+export const Head = () => (
+  <Seo pageTitle="home">
+    <body style={protoBG} />
+  </Seo>
+)
 
 export default IndexPage
