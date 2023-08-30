@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 import { btnOutlineDangerEmphasis } from './index.module.css'
+import { protoBg } from '../styles/proto_bg.module.css'
 
 const profileClasses = "rounded-circle img-fluid"
 
@@ -98,14 +99,9 @@ const Socials = ({ links }) => {
   )
 }
 
-const protoBG = {
-  backgroundImage: "url('protogens_tile.png')",
-  backgroundSize: "50%"
-}
-
 export const Head = () => (
   <Seo pageTitle="home">
-    <body style={protoBG} />
+    <body className={protoBg} />
   </Seo>
 )
 
