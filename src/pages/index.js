@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
+import { btnOutlineDangerEmphasis } from './index.module.css'
 
 const profileClasses = "rounded-circle img-fluid"
 
@@ -69,11 +70,8 @@ const SocialLink = ({ href, name, last }) => {
 }
 
 const SocialButton = ({ href, name, last }) => {
-  let classes = "btn btn-outline-danger rounded-pill w-100"
-  if (!last) classes += " mb-2"
-
   return (
-    <a href={href} className={classes}>{name}</a>
+    <a href={href} className={`btn rounded-pill w-100 ${btnOutlineDangerEmphasis} ${!last && "mb-2"}`}>{name}</a>
   )
 }
 
