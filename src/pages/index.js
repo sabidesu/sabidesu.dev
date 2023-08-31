@@ -53,7 +53,7 @@ const IndexPage = () => {
             <div className="col-md-4 d-flex justify-content-end">
               {profileImages[Math.floor(Math.random() * profileImages.length)]}
             </div>
-            <div className="col-md-8">
+            <div className="col-md me-0 me-md-5">
               <h4 className="text-info-emphasis display-4">hi, i'm sabi!</h4>
               <p className="mb-1">i'm just a demon kerret (cat/ferret) that likes to program things. you can find me at the places below</p>
               <Socials links={socialMedia} />
