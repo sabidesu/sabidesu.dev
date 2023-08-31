@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
       {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>
-            <h2><Link to={`/blog/${node.frontmatter.slug}`}>{node.frontmatter.title}</Link></h2>
+            <h2><Link to={`/blog/${node.frontmatter.slug}`} className="text-decoration-none text-danger-emphasis">{node.frontmatter.title}</Link></h2>
             <h3>{node.frontmatter.date.toLowerCase()}</h3>
             <p>{node.excerpt}</p>
           </article>
