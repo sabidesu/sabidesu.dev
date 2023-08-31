@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
-import { btnOutlineDangerEmphasis } from './index.module.css'
+import { socialButtons, btnOutlineDangerEmphasis } from './index.module.css'
 import { protoBg } from '../styles/proto_bg.module.css'
 
 const profileClasses = "rounded-circle img-fluid w-75"
@@ -76,7 +76,7 @@ const SocialLink = ({ href, name, last }) => {
 
 const SocialButton = ({ href, name, last }) => {
   return (
-    <a href={href} className={`btn rounded-pill w-100 ${btnOutlineDangerEmphasis} ${!last && "mb-2"}`}>{name}</a>
+    <a href={href} className={`btn ${btnOutlineDangerEmphasis} rounded-pill w-100 ${!last && "mb-2"}`}>{name}</a>
   )
 }
 
@@ -91,7 +91,7 @@ const Socials = ({ links }) => {
           })
         }
       </ul>
-      <div className="d-sm-none mt-3">
+      <div className="d-sm-none mt-3" id={socialButtons}>
         {
           links.map(({ href, name }, index) => {
             if (index === links.length - 1) return <SocialButton href={href} name={name} key={name} last />
