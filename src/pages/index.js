@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import { btnOutlineDangerEmphasis } from './index.module.css'
 import { protoBg } from '../styles/proto_bg.module.css'
 
-const profileClasses = "rounded-circle img-fluid"
+const profileClasses = "rounded-circle img-fluid w-50"
 
 const profileImages = [
   <StaticImage
@@ -46,7 +46,7 @@ const IndexPage = () => {
       <div className="card">
         <div className="card-body">
           <div className="row align-items-center gy-4">
-            <div className="col-sm-4">
+            <div className="col-sm-4 d-flex justify-content-end">
               {profileImages[Math.floor(Math.random() * profileImages.length)]}
             </div>
             <div className="col-sm-8">
