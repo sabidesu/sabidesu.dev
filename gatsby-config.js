@@ -6,7 +6,7 @@ module.exports = {
     title: `sabi's stuff`,
     description: `a place for sabi to put it's things and thoughts`,
     twitterUsername: `@sabidesu1`,
-    image: `/fullbody_ivory.png`,
+    image: `/fullbody_ivory.webp`,
     siteUrl: `https://sabidesu.dev`,
   },
   plugins: [
