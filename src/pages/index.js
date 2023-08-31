@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import { btnOutlineDangerEmphasis } from './index.module.css'
 import { protoBg } from '../styles/proto_bg.module.css'
 
-const profileClasses = "rounded-circle img-fluid w-50"
+const profileClasses = "rounded-circle img-fluid w-75"
 
 const profileImages = [
   <StaticImage
