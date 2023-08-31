@@ -50,7 +50,7 @@ const IndexPage = () => {
               {profileImages[Math.floor(Math.random() * profileImages.length)]}
             </div>
             <div className="col-sm-8">
-              <h4 className="text-info-emphasis">hi, i'm sabi!</h4>
+              <h4 className="text-info-emphasis display-4">hi, i'm sabi!</h4>
               <p className="mb-1">i'm just a demon kerret (cat/ferret) that likes to program things. you can find me at the places below</p>
               <Socials links={socialMedia} />
             </div>
