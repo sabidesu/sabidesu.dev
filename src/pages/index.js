@@ -37,7 +37,11 @@ const socialMedia = [
   {
     href: "https://bsky.app/profile/sabidesu.dev",
     name: "bluesky",
-  }
+  },
+  {
+    href: "https://github.com/sabidesu",
+    name: "github",
+  },
 ]
 
 const IndexPage = () => {
