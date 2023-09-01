@@ -1,4 +1,4 @@
-#social-buttons .btn-outline-danger-emphasis {
+#custom-buttons .btn-outline-danger-emphasis {
   --bs-btn-color: var(--bs-danger-text-emphasis);
   --bs-btn-border-color: var(--bs-danger-text-emphasis);
   --bs-btn-hover-color: var(--bs-white);
