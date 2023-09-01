@@ -9,7 +9,8 @@ const projects = [
     name: "personal website",
     description: "you're currently on it!",
     viewLink: "https://youtu.be/dQw4w9WgXcQ?si=4LhkPvkMzEPds7m-",
-    github: "https://github.com/sabidesu/sabidesu.dev",
+    sourceLink: "https://github.com/sabidesu/sabidesu.dev",
+    sourceLinkText: "github",
     image: null,
   },
 ]
@@ -38,7 +39,7 @@ const ProjectCard = ({project}) => {
             <h5 className="card-title">{project.name}</h5>
             <p className="card-text">{project.description}</p>
             <div className="d-flex justify-content-end" id={customButtons}>
-              { project.github && <a href={project.github} className="btn btn-outline-light rounded-pill" target="_blank" rel="noopener noreferrer">github</a>}
+              { project.sourceLink && <a href={project.sourceLink} className="btn btn-outline-light rounded-pill" target="_blank" rel="noopener noreferrer">{project.sourceLinkText}</a>}
               { project.viewLink && <a href={project.viewLink} className={`btn ${btnOutlineDangerEmphasis} rounded-pill ms-2`} target="_blank" rel="noopener noreferrer">view</a>}
             </div>
           </div>
