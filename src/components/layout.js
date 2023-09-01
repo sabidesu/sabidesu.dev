@@ -31,7 +31,7 @@ const Layout = ({ pageTitle, children }) => {
           </div>
         </div>
       </nav>
-      <main className="w-75 position-absolute top-50 start-50 translate-middle mt-4 mt-md-0">
+      <main className="container w-75 position-absolute top-50 start-50 translate-middle mt-4 mt-md-0 px-0">
         <h1 className="text-info-emphasis display-1">{pageTitle}</h1>
         {children}
       </main>
