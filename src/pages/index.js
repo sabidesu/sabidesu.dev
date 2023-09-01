@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
-import { socialButtons, btnOutlineDangerEmphasis } from './index.module.css'
+import { socialButtons, btnOutlineDangerEmphasis } from '../styles/button_styles.module.css'
 import { protoBg } from '../styles/proto_bg.module.css'
 
 const profileClasses = "rounded-circle img-fluid w-75"
