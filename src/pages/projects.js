@@ -11,7 +11,7 @@ const projects = [
     viewLink: "https://youtu.be/dQw4w9WgXcQ?si=4LhkPvkMzEPds7m-",
     sourceLink: "https://github.com/sabidesu/sabidesu.dev",
     sourceLinkText: "github",
-    image: null,
+    previewImage: null,
   },
 ]
 
@@ -30,8 +30,8 @@ const ProjectCard = ({project}) => {
   return (
     <div className="card mb-3">
       <div className="row g-0">
-        { project.image && <div className="col-sm-4">
-          <GatsbyImage image={project.image} className="img-fluid rounded-start" />
+        { project.previewImage && <div className="col-sm-4">
+          <GatsbyImage image={project.previewImage} className="img-fluid rounded-start" />
         </div>
         }
         <div className="col-sm">
