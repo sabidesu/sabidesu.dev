@@ -2,14 +2,15 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { customButtons, btnOutlineDangerEmphasis } from '../styles/button_styles.module.css'
 
 const projects = [
   {
     name: "personal website",
     description: "you're currently on it!",
-    viewLink: null,
+    viewLink: "https://youtu.be/dQw4w9WgXcQ?si=4LhkPvkMzEPds7m-",
     github: "https://github.com/sabidesu/sabidesu.dev",
-    image: "../images/fanart_colored_by_rose.png",
+    image: null,
   },
 ]
 
@@ -36,9 +37,9 @@ const ProjectCard = ({project}) => {
           <div className="card-body">
             <h5 className="card-title">{project.name}</h5>
             <p className="card-text">{project.description}</p>
-            <div className="d-flex justify-content-end">
-              { project.github && <a href={project.github} className="btn btn-outline-danger rounded-pill">github</a>}
-              { project.viewLink && <a href={project.viewLink} className="btn btn-outline-danger rounded-pill ms-2">view</a>}
+            <div className="d-flex justify-content-end" id={customButtons}>
+              { project.github && <a href={project.github} className="btn btn-outline-light rounded-pill" target="_blank" rel="noopener noreferrer">github</a>}
+              { project.viewLink && <a href={project.viewLink} className={`btn ${btnOutlineDangerEmphasis} rounded-pill ms-2`} target="_blank" rel="noopener noreferrer">view</a>}
             </div>
           </div>
         </div>
