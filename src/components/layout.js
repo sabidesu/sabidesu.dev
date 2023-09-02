@@ -31,7 +31,7 @@ const Layout = ({ pageTitle, children }) => {
           </div>
         </div>
       </nav>
-      <main className="container w-75 px-0 d-flex flex-grow-1 flex-column justify-content-center" style={{paddingTop: "4.47rem", paddingBottom: "2rem"}}>
+      <main className="container w-75 px-0 d-flex flex-grow-1 flex-column justify-content-center" style={{paddingTop: "4.25rem", paddingBottom: "1.5rem"}}>
         <h1 className="text-info-emphasis display-1">{pageTitle}</h1>
         {children}
       </main>
