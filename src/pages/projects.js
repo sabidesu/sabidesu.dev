@@ -44,8 +44,8 @@ const ProjectsPage = ({ data }) => {
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="card">
-      <div className="row g-0">
+    <div className="card h-100">
+      <div className="row g-0 h-100">
         {project.previewImage && (
           <div className="col-sm-3">
             <GatsbyImage image={project.previewImage.gatsbyImage} alt={project.previewImage.description} className="img-fluid rounded-start h-100" />
