@@ -14,10 +14,8 @@ export const query = graphql`
         }
         name
         previewImage {
-          file {
-            url
-          }
           description
+          gatsbyImage(width: 1000)
         }
         viewLink
         sourceLink
@@ -43,13 +41,15 @@ const ProjectCard = ({ project }) => {
     <div className="card mb-3">
       <div className="row g-0">
         { project.previewImage && <div className="col-sm-4">
-          <GatsbyImage image={project.previewImage} className="img-fluid rounded-start" />
+          <GatsbyImage image={project.previewImage.gatsbyImage} alt={project.previewImage.description} className="img-fluid rounded-start" />
         </div>
         }
         <div className="col-sm">
-          <div className="card-body">
-            <h5 className="card-title">{project.name}</h5>
-            <p className="card-text">{project.description.description}</p>
+          <div className="card-body h-100 d-flex flex-column justify-content-between">
+            <div className="mb-3">
+              <h5 className="card-title">{project.name}</h5>
+              <p className="card-text">{project.description.description}</p>
+            </div>
             <div className="d-flex justify-content-end" id={customButtons}>
               { project.sourceLink && <a href={project.sourceLink} className="btn btn-outline-light rounded-pill" target="_blank" rel="noopener noreferrer">{project.sourceLinkText}</a>}
               { project.viewLink && <a href={project.viewLink} className={`btn ${btnOutlineDangerEmphasis} rounded-pill ms-2`} target="_blank" rel="noopener noreferrer">view</a>}
