@@ -48,7 +48,7 @@ const ProjectCard = ({ project }) => {
       <div className="row g-0 h-100">
         {project.previewImage && (
           <div className="col-sm-3">
-            <GatsbyImage image={project.previewImage.gatsbyImage} alt={project.previewImage.description} className="img-fluid rounded-start h-100" />
+            <GatsbyImage image={project.previewImage.gatsbyImage} alt={project.previewImage.description} className="img-fluid rounded h-100" />
           </div>
         )}
         <div className="col-sm">
@@ -58,8 +58,8 @@ const ProjectCard = ({ project }) => {
               <p className="card-text">{project.description.description}</p>
             </div>
             <div className="d-flex justify-content-end" id={customButtons}>
-              { project.viewLink && <a href={project.viewLink} className={`btn ${btnOutlineDangerEmphasis} rounded-pill`} target="_blank" rel="noopener noreferrer">view</a>}
-              { project.sourceLink && <a href={project.sourceLink} className="btn btn-outline-light rounded-pill ms-2" target="_blank" rel="noopener noreferrer">{project.sourceLinkText}</a>}
+              { project.viewLink && <a href={project.viewLink} className={'btn btn-outline-light rounded-pill'} target="_blank" rel="noopener noreferrer">view</a>}
+              { project.sourceLink && <a href={project.sourceLink} className={`btn ${btnOutlineDangerEmphasis} rounded-pill ms-2`} target="_blank" rel="noopener noreferrer">{project.sourceLinkText}</a>}
             </div>
           </div>
         </div>
