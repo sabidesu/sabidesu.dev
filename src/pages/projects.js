@@ -46,9 +46,11 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="card">
       <div className="row g-0">
-        <div className="col-sm-3">
-          <GatsbyImage image={project.previewImage.gatsbyImage} alt={project.previewImage.description} className="img-fluid rounded-start h-100" />
-        </div>
+        {project.previewImage && (
+          <div className="col-sm-3">
+            <GatsbyImage image={project.previewImage.gatsbyImage} alt={project.previewImage.description} className="img-fluid rounded-start h-100" />
+          </div>
+        )}
         <div className="col-sm">
           <div className="card-body h-100 d-flex flex-column justify-content-between">
             <div className="mb-3">
