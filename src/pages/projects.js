@@ -32,7 +32,7 @@ const ProjectsPage = ({ data }) => {
       <div className="row gx-3 gy-3">
         {
           data.allContentfulProject.nodes.map((project) => (
-            <div className="col-sm-6">
+            <div className="col-lg-6">
               <ProjectCard project={project} key={project.name} />
             </div>
           ))
