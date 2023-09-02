@@ -13,7 +13,7 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
-    <div>
+    <div className="d-flex flex-column min-vh-100">
       <nav className="navbar navbar-expand-sm text-bg-dark fixed-top">
         <div className="container-fluid">
           <h6 className="navbar-brand mb-1">{data.site.siteMetadata.title}</h6>
@@ -25,12 +25,13 @@ const Layout = ({ pageTitle, children }) => {
               <li className="nav-item"><Link to="/" className="nav-link">home</Link></li>
               <li className="nav-item"><Link to="/about" className="nav-link">about</Link></li>
               <li className="nav-item"><Link to="/blog" className="nav-link">blog</Link></li>
+              <li className="nav-item"><Link to="/projects" className="nav-link">projects</Link></li>
               <li className="nav-item"><Link to="/protogens" className="nav-link">protogens!</Link></li>
             </ul>
           </div>
         </div>
       </nav>
-      <main className="w-75 position-absolute top-50 start-50 translate-middle mt-4 mt-md-0">
+      <main className="container w-75 px-0 d-flex flex-grow-1 flex-column justify-content-center" style={{paddingTop: "4.25rem", paddingBottom: "1.5rem"}}>
         <h1 className="text-info-emphasis display-1">{pageTitle}</h1>
         {children}
       </main>
