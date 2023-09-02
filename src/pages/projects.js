@@ -28,7 +28,7 @@ export const query = graphql`
 const ProjectsPage = ({ data }) => {
   return (
     <Layout pageTitle="projects">
-      <h3 className="mb-3">here are some projects i've worked on!</h3>
+      <h3 className="mb-3">here are some projects i've worked on! (or are <em>working</em> on! ;)</h3>
       <div className="row gx-3 gy-3">
         {
           data.allContentfulProject.nodes.map((project) => (
