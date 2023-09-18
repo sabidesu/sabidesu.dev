@@ -8,7 +8,7 @@ const BlogPage = ({ data }) => {
     <Layout pageTitle="blog">
       {
         data.allMdx.nodes.map((node) => (
-          <article key={node.id}>
+          <article key={node.id} className="mb-2">
             <h2><Link to={`/blog/${node.frontmatter.slug}`} className="text-decoration-none text-danger-emphasis">{node.frontmatter.title}</Link></h2>
             <h3>{node.frontmatter.date.toLowerCase()}</h3>
             <p>{node.excerpt}</p>
