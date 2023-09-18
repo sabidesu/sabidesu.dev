@@ -35,7 +35,7 @@ const socialMedia = [
     name: "tumblr",
   },
   {
-    href: "https://bsky.app/profile/sabidesu.dev",
+    href: "https://bsky.app/profile/sabi.pink",
     name: "bluesky",
   },
   {
