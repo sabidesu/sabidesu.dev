@@ -5,7 +5,7 @@ import Seo from '../../components/seo'
 
 const BlogPost = ({ data, children }) => {
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <Layout pageTitle={data.mdx.frontmatter.title} blogPost>
       <h3>{data.mdx.frontmatter.date.toLowerCase()}</h3>
       {children}
     </Layout>
