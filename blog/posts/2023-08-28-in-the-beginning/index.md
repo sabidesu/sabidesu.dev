@@ -1,6 +1,6 @@
 ---
 title: "in the beginning"
-date: "2023-08-28"
+date: 2023-08-28
 slug: "in-the-beginning"
 ---
 
