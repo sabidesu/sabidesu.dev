@@ -2,12 +2,15 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import { blogPost } from '../../styles/blog_post.module.css'
 
 const BlogPost = ({ data, children }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title} blogPost>
       <h3>{data.mdx.frontmatter.date.toLowerCase()}</h3>
-      {children}
+      <div id={blogPost}>
+        {children}
+      </div>
     </Layout>
   )
 }
