@@ -35,6 +35,11 @@ const PronunciationGenerator = () => {
       result += ' 🎊'
 
     setPronunciation(result)
+
+    const utterance = new SpeechSynthesisUtterance(result)
+    utterance.lang = 'en-US'
+    utterance.rate = 0.8
+    speechSynthesis.speak(utterance)
   }
 
   return (
