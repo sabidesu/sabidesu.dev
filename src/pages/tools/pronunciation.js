@@ -45,7 +45,7 @@ const PronunciationGenerator = () => {
   return (
     <div id={customButtons} className="text-wrap text-break">
       <p className="lead">{pronunciation}</p>
-      <button className={`btn ${btnOutlineDangerEmphasis} rounded-pill`} onClick={generatePronunciation}>like this</button>
+      <button className={`btn ${btnOutlineDangerEmphasis} rounded-pill`} onClick={generatePronunciation}>like this 🔊</button>
     </div>
   )
 }
