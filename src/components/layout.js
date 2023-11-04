@@ -27,6 +27,12 @@ const Layout = ({ pageTitle, children, blogPost }) => {
               <li className="nav-item"><Link to="/blog" className="nav-link">blog</Link></li>
               <li className="nav-item"><Link to="/projects" className="nav-link">projects</Link></li>
               <li className="nav-item"><Link to="/protogens" className="nav-link">protogens!</Link></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">tools</a>
+                <ul className="dropdown-menu">
+                  <li><Link to="/tools/pronunciation" className="dropdown-item">pronunciation</Link></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
