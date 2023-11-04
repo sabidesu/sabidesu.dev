@@ -27,10 +27,12 @@ const PronunciationGenerator = () => {
 
     result += headsOrTails() ? 'a' : ''
 
-    while (headsOrTails()) {
+    while (headsOrTails())
       result += syllables[Math.floor(Math.random() * syllables.length)]
-    }
     result += 'bi'
+
+    if (result === 'sabi')
+      result += ' 🎊'
 
     setPronunciation(result)
   }
