@@ -27,6 +27,7 @@ const Layout = ({ pageTitle, children, blogPost }) => {
               <li className="nav-item"><Link to="/blog" className="nav-link">blog</Link></li>
               <li className="nav-item"><Link to="/projects" className="nav-link">projects</Link></li>
               <li className="nav-item"><Link to="/protogens" className="nav-link">protogens!</Link></li>
+              <li className="nav-item"><Link to="/itg" className="nav-link">itg</Link></li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">tools</a>
                 <ul className="dropdown-menu">
@@ -39,7 +40,7 @@ const Layout = ({ pageTitle, children, blogPost }) => {
       </nav>
       <main className="container w-75 px-0 d-flex flex-grow-1 flex-column justify-content-center" style={{paddingTop: "4.25rem", paddingBottom: "1.5rem"}}>
         {blogPost && <Link to="/blog" className="text-light text-decoration-none">&larr; back to posts</Link>}
-        <h1 className="text-info-emphasis display-1">{pageTitle}</h1>
+        <h1 className="text-info-emphasis display-1 pb-2">{pageTitle}</h1>
         {children}
       </main>
     </div>
